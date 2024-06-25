@@ -47,7 +47,7 @@ public class TagsUtils {
 							.generateFromTemplate(tagsSpecification.get("template").toString(), datamodel);
 					JSONWriter.writeJSONToFile(json, tagFile);
 				} catch (TemplateGeneratorException e) {
-					generator.getLogger().error("Failed to generate code for tag: " + tag.getKey(), e);
+					generator.getLogger().error("Failed to generate code for tag: {}", tag.getKey(), e);
 				}
 			}
 		});
@@ -89,6 +89,7 @@ public class TagsUtils {
 				} else if (map.containsKey("entry")) {
 					String entry = GeneratorTokens.replaceTokens(generator.getWorkspace(), ((String) map.get("entry"))
 									//@formatter:off
+									.replace("@NAME", element.getModElement().getName())
 									.replace("@modid", generator.getWorkspace().getWorkspaceSettings().getModID())
 									.replace("@registryname", element.getModElement().getRegistryName())
 							//@formatter:on
@@ -125,7 +126,7 @@ public class TagsUtils {
 			// only add this entry if it does not already exist in managed or unmanaged form
 			else if (!entries.contains(entryManaged) && !entries.contains(entry)) {
 				// We add managed entries to the beginning of the list
-				generator.getWorkspace().getTagElements().get(tag).add(0, entryManaged);
+				generator.getWorkspace().getTagElements().get(tag).addFirst(entryManaged);
 			}
 		}
 	}

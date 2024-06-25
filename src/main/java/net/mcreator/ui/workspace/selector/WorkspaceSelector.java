@@ -22,6 +22,7 @@ import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.util.SystemInfo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.Strictness;
 import net.mcreator.Launcher;
 import net.mcreator.io.FileIO;
 import net.mcreator.io.OS;
@@ -332,7 +333,7 @@ public final class WorkspaceSelector extends JFrame implements DropTargetListene
 			try {
 				List<?> transferData = (List<?>) transferable.getTransferData(DataFlavor.javaFileListFlavor);
 				if (!transferData.isEmpty()) {
-					Object transfObj = transferData.get(0);
+					Object transfObj = transferData.getFirst();
 					if (transfObj instanceof File workspaceFile) {
 						if (workspaceFile.getName().endsWith(".mcreator")) {
 							workspaceOpenListener.workspaceOpened(workspaceFile);
@@ -373,7 +374,7 @@ public final class WorkspaceSelector extends JFrame implements DropTargetListene
 		saveRecentWorkspaces();
 	}
 
-	private static final Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
+	private static final Gson gson = new GsonBuilder().setPrettyPrinting().setStrictness(Strictness.LENIENT).create();
 
 	private void saveRecentWorkspaces() {
 		String serialized = gson.toJson(recentWorkspaces);
@@ -548,7 +549,7 @@ public final class WorkspaceSelector extends JFrame implements DropTargetListene
 		if (!Launcher.version.isSnapshot()) {
 			soim = new ImagePanel(SplashScreen.getSplashImage(true));
 			((ImagePanel) soim).setFitToWidth(true);
-			((ImagePanel) soim).setOffsetY(-240);
+			((ImagePanel) soim).setOffsetY(-200);
 		} else {
 			soim = new JPanel();
 			soim.setBackground(Theme.current().getSecondAltBackgroundColor());

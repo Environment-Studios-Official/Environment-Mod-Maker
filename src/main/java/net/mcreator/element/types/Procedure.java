@@ -78,25 +78,25 @@ public class Procedure extends GeneratableElement {
 		int idx = dependencies.indexOf(new Dependency("z", "number"));
 		if (idx != -1) {
 			Dependency dependency = dependencies.remove(idx);
-			dependencies.add(0, dependency);
+			dependencies.addFirst(dependency);
 		}
 
 		idx = dependencies.indexOf(new Dependency("y", "number"));
 		if (idx != -1) {
 			Dependency dependency = dependencies.remove(idx);
-			dependencies.add(0, dependency);
+			dependencies.addFirst(dependency);
 		}
 
 		idx = dependencies.indexOf(new Dependency("x", "number"));
 		if (idx != -1) {
 			Dependency dependency = dependencies.remove(idx);
-			dependencies.add(0, dependency);
+			dependencies.addFirst(dependency);
 		}
 
 		idx = dependencies.indexOf(new Dependency("world", "world"));
 		if (idx != -1) {
 			Dependency dependency = dependencies.remove(idx);
-			dependencies.add(0, dependency);
+			dependencies.addFirst(dependency);
 		}
 
 		return dependencies;
@@ -129,7 +129,6 @@ public class Procedure extends GeneratableElement {
 			additionalData.put("dependencies", reloadDependencies());
 			additionalData.put("procedurecode", ProcedureCodeOptimizer.removeMarkers(blocklyToJava.getGeneratedCode()));
 			additionalData.put("return_type", blocklyToJava.getReturnType());
-			additionalData.put("has_trigger", trigger != null);
 			additionalData.put("localvariables", blocklyToJava.getLocalVariables());
 			additionalData.put("procedureblocks", blocklyToJava.getUsedBlocks());
 
