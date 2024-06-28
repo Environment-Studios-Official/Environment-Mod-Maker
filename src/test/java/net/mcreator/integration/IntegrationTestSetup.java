@@ -79,7 +79,7 @@ public class IntegrationTestSetup implements BeforeAllCallback {
 		Logger LOG = LogManager.getLogger("Test setup");
 
 		Properties conf = new Properties();
-		conf.load(Launcher.class.getResourceAsStream("/mcreator.conf"));
+		conf.load(Launcher.class.getResourceAsStream("/esmmaker.conf"));
 		Launcher.version = new MCreatorVersionNumber(conf);
 
 		// print version of Java

@@ -54,7 +54,7 @@ public class Launcher {
 
 		try {
 			Properties conf = new Properties();
-			conf.load(Launcher.class.getResourceAsStream("/mcreator.conf"));
+			conf.load(Launcher.class.getResourceAsStream("/esmmaker.conf"));
 			version = new MCreatorVersionNumber(conf);
 		} catch (IOException e) {
 			LOG.error("Failed to read MCreator config", e);
