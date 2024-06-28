@@ -1,76 +1,60 @@
-body {
-    fill: #424242;
-}
-
-#blockly {
-    background: #424242;
-}
-
-.blocklySvg {
-    background-color: #424242 !important;
-}
-
-.blocklyMainBackground {
-    fill: #424242 !important;
-}
-
 ::-webkit-scrollbar-track {
-    background: #505050;
-}
-
-::-webkit-scrollbar-corner {
-    background: #505050;
+    background: #253C56;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #323232;
+    background: #262D36;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #424242;
+    background: #1E3959;
+}
+
+.blocklyMainBackground {
+    fill: rgba(38, 45, 54, 0.66) !important;
 }
 
 .blocklyToolboxDiv {
-    background-color: #323232;
+    background-color: #262D36;
     color: white;
 }
 
 .blocklyTreeRow:not(.blocklyTreeSelected):hover {
     background-color: #e4e4e4 !important;
-    color: #323232 !important;
+    color: #262D36 !important;
 }
 
 .blocklyTreeSeparator {
-    border-bottom: solid #505050 1px;
+    border-bottom: solid #253C56 1px;
 }
 
 .blocklyFlyout {
-    background-color: #323232c2;
+    background-color: #262D36c2;
 }
 
 .blocklyScrollbarVertical .blocklyScrollbarHandle {
-    fill: #323232;
+    fill: #262D36;
 }
 
 .blocklyScrollbarVertical:hover .blocklyScrollbarHandle {
-    fill: #3e3d3d;
+    fill: #105CEA;
 }
 
 .blocklyScrollbarHorizontal .blocklyScrollbarHandle {
-    fill: #323232;
+    fill: #262D36;
 }
 
 .blocklyScrollbarHorizontal:hover .blocklyScrollbarHandle {
-    fill: #3e3d3d;
+    fill: #105CEA;
 }
 
 .whlab > .blocklyFlyoutLabelText {
-    fill: white !important;
+    fill: white;
 }
 
 .blocklyDropDownDiv {
-    background: #505050 !important;
-    border-color: #1e1e1e !important;
+    background: #253C56 !important;
+    border-color: #8D9196 !important;
 }
 
 .blocklyDropDownDiv .goog-menuitem-content {
@@ -78,13 +62,13 @@ body {
 }
 
 .blocklyTooltipDiv {
-    background-color: #323232;
+    background-color: #262D36;
     color: white;
 }
 
 .blocklyWidgetDiv .goog-menu {
-    background: #323232 !important;
-    border-color: #505050 !important;
+    background: #262D36 !important;
+    border-color: #253C56 !important;
 }
 
 .blocklyWidgetDiv .goog-menuitem-content {
@@ -107,6 +91,6 @@ body {
 }
 
 .blocklyHtmlTextAreaInput {
-    background: #323232;
+    background: #262D36;
     color: white;
 }
