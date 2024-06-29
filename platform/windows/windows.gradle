@@ -45,7 +45,7 @@ tasks.register('exportWin64', Copy.class) {
     }
     into('lib') {
         from 'build/libs'
-        from configurations.export exclude('mcreator.jar')
+        from configurations.export exclude('esmmaker.jar')
         from configurations.win64
     }
     into('plugins') { from 'build/plugins/' }

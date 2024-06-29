@@ -38,7 +38,7 @@ public class IDESection extends PreferencesSection {
 		super(preferencesIdentifier);
 
 		editorTheme = addEntry(
-				new StringEntry("editorTheme", "MCreator", "MCreator", "Default", "Default-Alt", "Dark", "Eclipse",
+				new StringEntry("editorTheme", "ESMMaker", "ESMMaker", "Default", "Default-Alt", "Dark", "Eclipse",
 						"Idea", "Monokai", "VS"));
 		fontSize = addEntry(new IntegerEntry("fontSize", 12, 5, 48));
 		autocomplete = addEntry(new BooleanEntry("autocomplete", true));

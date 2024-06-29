@@ -30,7 +30,7 @@ jar {
         mkdir 'build/export/'
     }
 
-    archiveFileName = 'mcreator.jar'
+    archiveFileName = 'esmmaker.jar'
     manifest {
         attributes(
                 'Main-Class': 'net.mcreator.Launcher',
