@@ -58,10 +58,10 @@ public class WorkspaceFolderManager {
 	}
 
 	public static File getSuggestedWorkspaceFoldersRoot() {
-		File workspacesFolder = new File(System.getProperty("user.home"), "MCreatorWorkspaces");
+		File workspacesFolder = new File(System.getProperty("user.home"), "ESMMakerWorkspaces");
 		if (!workspacesFolder.getAbsolutePath().matches("[a-zA-Z0-9_/+\\-\\\\:()\\[\\].,@$=`' ]+")) {
 			if (OS.getOS() == OS.WINDOWS)
-				workspacesFolder = new File("C:/", "MCreatorWorkspaces");
+				workspacesFolder = new File("C:/", "ESMMakerWorkspaces");
 		}
 		return workspacesFolder;
 	}
@@ -192,7 +192,7 @@ public class WorkspaceFolderManager {
 	}
 
 	public File getWorkspaceCacheDir() {
-		return new File(workspaceFolder, ".mcreator/");
+		return new File(workspaceFolder, ".esmmaker/");
 	}
 
 	public File getModElementPicturesCacheDir() {

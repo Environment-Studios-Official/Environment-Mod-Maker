@@ -237,7 +237,7 @@ public class WorkspaceFileBrowser extends JPanel {
 			File[] rootFiles = mcreator.getWorkspaceFolder().listFiles();
 			for (File file : rootFiles != null ? rootFiles : new File[0]) {
 				if (file.isFile() && !file.isHidden() && !file.getName().startsWith("."))
-					if (!file.getName().startsWith("gradlew") && !file.getName().endsWith(".mcreator"))
+					if (!file.getName().startsWith("gradlew") && !file.getName().endsWith(".modproject"))
 						node.add(new FilterTreeNode(file));
 			}
 

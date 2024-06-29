@@ -1,5 +1,5 @@
-If you are interested in helping with MCreator development, you are welcome to support this project by 
-opening pull requests. Even if you do not code, you can help by [contributing translations](https://translate.mcreator.net/), [in-app tips](https://github.com/MCreator/MCreator/tree/master/plugins/mcreator-localization/help), or
+If you are interested in helping with ESMMaker development, you are welcome to support this project by 
+opening pull requests. Even if you do not code, you can help by [contributing translations](https://translate.mcreator.net/), [in-app tips](https://github.com/ESMMaker/ESMMaker/tree/master/plugins/mcreator-localization/help), or
 by [donating](https://mcreator.net/donate).
 
 # General contributing tips
@@ -14,7 +14,7 @@ by [donating](https://mcreator.net/donate).
 
 # Pull request rules
 
-Some features might not be accepted into the core if they do not follow our guidelines, are low quality, or steer MCreator away from its roadmap 
+Some features might not be accepted into the core if they do not follow our guidelines, are low quality, or steer ESMMaker away from its roadmap 
 or do not fit the current UX flow of the application. Too specific features that would make UI more complex, but would not be beneficial to the
 most of the users might be rejected too, or suggested to be distributed in a plugin format. Expect comments on code after the code review. You will likely
 need to change some code parts based on the maintainer's suggestions.
@@ -27,7 +27,7 @@ General rules on pull requests are:
 * **Avoid big PRs.** Similar as the previous rule. They will be likely take much more time to review. Large PRs might not be accepted due to amount of code reviewing and testing needed. Similar rule applies to PRs that significantly change core implementation.
 * **PRs with low code quality, bugs (or code that seems untested), may be closed without further comments.** PRs from contributors breaking this rule multiple times may no longer be accepted.
 * Refactoring the code or code cleanup just for the sake of it is not desired. Such PRs can introduce bugs on the cost of making the code prettier. We may close such PRs if we consider them as not needed.
-* Prepare a changelog of your pull request that is ready to be used in the final MCreator changelog
+* Prepare a changelog of your pull request that is ready to be used in the final ESMMaker changelog
 * Add tests for features you added with the PR, if new fields were added to mod elements, update TestWorkspaceDataProvider
 * If a contributor opens multiple new PRs without finishing old ones, we may assume the older PRs are no longer in their interest and close them, so other contributors and maintainers don't spend too much time reviewing PRs that will likely not get merged down the road.
 
@@ -37,11 +37,11 @@ Some more useful resources on PRs and contributing code that help the keep code 
 * [The (written) unwritten guide to pull requests](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests)
 * [Pull Request Etiquette for Reviewers and Authors](https://betterprogramming.pub/pull-request-etiquettes-for-reviewer-and-author-f4e80360f92c)
 
-Getting started tips on actual code development for MCreator can be found on [MCreator developers wiki](https://github.com/MCreator/MCreator/wiki).
+Getting started tips on actual code development for ESMMaker can be found on [ESMMaker developers wiki](https://github.com/ESMMaker/ESMMaker/wiki).
 
 # CLA
 
-Before we can use your code, you must sign the [MCreator CLA](https://cla-assistant.io/MCreator/MCreator), which you can do online.
+Before we can use your code, you must sign the [ESMMaker CLA](https://cla-assistant.io/ESMMaker/ESMMaker), which you can do online.
 The CLA is necessary mainly because you own the copyright to your changes, even after your contribution 
 becomes part of our codebase, so we need your permission to use and distribute your code. We also need to be sure 
 of various other things—for instance that you'll tell us if you know that your code infringes on other people's patents. 

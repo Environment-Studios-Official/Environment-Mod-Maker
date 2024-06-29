@@ -30,7 +30,7 @@ jar {
         mkdir 'build/export/'
     }
 
-    archiveFileName = 'mcreator.jar'
+    archiveFileName = 'esmmaker.jar'
     manifest {
         attributes(
                 'Main-Class': 'net.mcreator.Launcher',
@@ -78,7 +78,6 @@ tasks.register('generateExportReport') {
         if (!nf.isEmpty()) generators.add("NeoForge " + String.join("/", nf))
         if (!fg.isEmpty()) generators.add("Minecraft Forge " + String.join("/", fg))
         if (!dp.isEmpty()) generators.add("Data Packs " + String.join("/", dp))
-        if (!bd.isEmpty()) generators.add("and Bedrock Edition " + String.join("/", bd))
 
         report += 'mcreator=' + version.toString() + '.' + project.builddate.toString() + '\n'
         report += 'version=' + (String) project.mcreatorconf.getProperty('mcreator').toString() + '\n'
@@ -95,11 +94,7 @@ tasks.register('exportAll') {
     group 'export'
 
     dependsOn exportWindows
-    dependsOn exportMac
-    dependsOn exportLinux
     dependsOn generateExportReport
 }
 
 apply from: 'platform/windows/windows.gradle'
-apply from: 'platform/linux/linux.gradle'
-apply from: 'platform/mac/mac.gradle'

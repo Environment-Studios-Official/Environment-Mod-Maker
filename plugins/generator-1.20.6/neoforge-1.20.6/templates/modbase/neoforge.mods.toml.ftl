@@ -4,7 +4,7 @@ license="${settings.getLicense()}"
 
 [[mods]]
 modId="${settings.getModID()}"
-version="${settings.getCleanVersion()}"
+version="${settings.getVersion()}"
 displayName="${settings.getModName()}"
 <#if settings.getUpdateURL()?has_content>
 updateJSONURL="${settings.getUpdateURL()}"

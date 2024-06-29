@@ -58,7 +58,7 @@ public class RSyntaxTextAreaStyler {
 				theme = Theme.load(new ByteArrayInputStream(themeXML.getBytes(StandardCharsets.UTF_8)));
 			}
 
-			if (!PreferencesManager.PREFERENCES.ide.editorTheme.get().equals("MCreator")) {
+			if (!PreferencesManager.PREFERENCES.ide.editorTheme.get().equals("ESMMaker")) {
 				theme = Theme.load(te.getClass().getResourceAsStream(
 						"/org/fife/ui/rsyntaxtextarea/themes/" + PreferencesManager.PREFERENCES.ide.editorTheme.get()
 								.toLowerCase(Locale.ENGLISH) + ".xml"));

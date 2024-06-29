@@ -52,7 +52,7 @@ public class MCreatorVersionNumber {
 			while (resources.hasMoreElements()) {
 				Manifest manifest = new Manifest(resources.nextElement().openStream());
 				Attributes attributes = manifest.getMainAttributes();
-				if (attributes.getValue("MCreator-Version") != null) {
+				if (attributes.getValue("ESMMaker-Version") != null) {
 					String buildDateManifest = attributes.getValue("Build-Date");
 					if (buildDateManifest != null)
 						this.build = buildDateManifest;
@@ -84,11 +84,11 @@ public class MCreatorVersionNumber {
 	}
 
 	public String getMajorString() {
-		return major + (snapshot ? " EAP (" + build + ")" : "");
+		return major + (snapshot ? " SNAPSHOT (" + build + ")" : "");
 	}
 
 	public String getFullString() {
-		return full + (snapshot ? " EAP (" + build + ")" : "");
+		return full + (snapshot ? " SNAPSHOT (" + build + ")" : "");
 	}
 
 	@Override public String toString() {

@@ -86,7 +86,7 @@ public class WorkspaceSettingsAction extends GradleAction {
 			if (change.modidchanged) { // we need to refactor structures (modid in nbt files), change workspace file modid and reference in file manager
 				File originalWorkspaceFile = new File(mcreator.getFileManager().getWorkspaceFile().getPath());
 				File newWorkspaceFile = new File(mcreator.getFileManager().getWorkspaceFile().getParentFile().getPath(),
-						change.workspaceSettings.getModID() + ".mcreator");
+						change.workspaceSettings.getModID() + ".modproject");
 
 				// first save current workspace state
 				mcreator.getFileManager().saveWorkspaceDirectlyAndWait();
