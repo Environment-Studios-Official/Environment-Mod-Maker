@@ -109,7 +109,7 @@ Section "MCreator ${MCREATOR_VERSION}" Installation
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "NoRepair" 1
 
   ;add .mcreator file association
-  WriteRegStr HKCR ".mcreator" "" "MCreatorWorkspaceFile"
+  WriteRegStr HKCR ".modproject" "" "MCreatorWorkspaceFile"
   WriteRegStr HKCR "MCreatorWorkspaceFile" "" "MCreator workspace file"
   WriteRegStr HKCR "MCreatorWorkspaceFile\shell" "" "open"
   WriteRegStr HKCR "MCreatorWorkspaceFile\DefaultIcon" "" "$INSTDIR\esmmaker.exe,0"
@@ -172,7 +172,7 @@ Section "Uninstall"
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}"
 
   DeleteRegKey HKCR "MCreatorWorkspaceFile"
-  DeleteRegKey HKCR ".mcreator"
+  DeleteRegKey HKCR ".modproject"
 SectionEnd
 
 Function UninstallPrevious

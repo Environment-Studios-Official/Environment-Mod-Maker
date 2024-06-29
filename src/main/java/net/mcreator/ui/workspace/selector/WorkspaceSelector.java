@@ -137,7 +137,7 @@ public final class WorkspaceSelector extends JFrame implements DropTargetListene
 		actions.add("Center", subactions);
 
 		addWorkspaceButton(L10N.t("dialog.workspace_selector.open_workspace"), UIRES.get("opnwrk"), e -> {
-			File workspaceFile = FileDialogs.getOpenDialog(this, new String[] { ".mcreator" });
+			File workspaceFile = FileDialogs.getOpenDialog(this, new String[] { ".modproject" });
 			if (workspaceFile != null && workspaceFile.getParentFile().isDirectory())
 				workspaceOpenListener.workspaceOpened(workspaceFile);
 		});
@@ -350,7 +350,7 @@ public final class WorkspaceSelector extends JFrame implements DropTargetListene
 				if (!transferData.isEmpty()) {
 					Object transfObj = transferData.getFirst();
 					if (transfObj instanceof File workspaceFile) {
-						if (workspaceFile.getName().endsWith(".mcreator")) {
+						if (workspaceFile.getName().endsWith(".modproject")) {
 							workspaceOpenListener.workspaceOpened(workspaceFile);
 						} else {
 							Toolkit.getDefaultToolkit().beep();

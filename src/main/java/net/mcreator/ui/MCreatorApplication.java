@@ -215,7 +215,7 @@ public final class MCreatorApplication {
 							&& lastArg.charAt(lastArg.length() - 1) == '"')
 						lastArg = lastArg.substring(1, lastArg.length() - 1);
 					File passedFile = new File(lastArg);
-					if (passedFile.isFile() && passedFile.getName().endsWith(".mcreator")) {
+					if (passedFile.isFile() && passedFile.getName().endsWith(".modproject")) {
 						splashScreen.setVisible(false);
 						MCreator mcreator = openWorkspaceInMCreator(passedFile);
 						StartupNotifications.handleStartupNotifications(mcreator);

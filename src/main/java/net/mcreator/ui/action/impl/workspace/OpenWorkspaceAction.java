@@ -29,7 +29,7 @@ public class OpenWorkspaceAction extends BasicAction {
 
 	public OpenWorkspaceAction(ActionRegistry actionRegistry) {
 		super(actionRegistry, L10N.t("action.workspace.open"), e -> {
-			File workspaceFile = FileDialogs.getOpenDialog(actionRegistry.getMCreator(), new String[] { ".mcreator" });
+			File workspaceFile = FileDialogs.getOpenDialog(actionRegistry.getMCreator(), new String[] { ".modproject" });
 			if (workspaceFile != null && workspaceFile.getParentFile().isDirectory())
 				actionRegistry.getMCreator().getApplication().openWorkspaceInMCreator(workspaceFile);
 		});

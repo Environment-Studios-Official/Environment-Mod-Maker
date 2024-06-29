@@ -40,7 +40,7 @@ public class WorkspaceUtils {
 	public static File getWorkspaceFileForWorkspaceFolder(File workspaceDir) {
 		File[] files = workspaceDir.listFiles();
 		for (File wfile : files != null ? files : new File[0])
-			if (wfile.isFile() && wfile.getName().endsWith(".mcreator"))
+			if (wfile.isFile() && wfile.getName().endsWith(".modproject"))
 				return wfile;
 		return null;
 	}

@@ -112,7 +112,7 @@ public class NewWorkspaceDialog extends MCreatorDialog {
 				}
 
 				workspaceFile = new File(new File(current.getWorkspaceFolder()),
-						workspaceSettings.getModID() + ".mcreator");
+						workspaceSettings.getModID() + ".modproject");
 				Workspace workspace = Workspace.createWorkspace(workspaceFile, workspaceSettings);
 				workspace.close();
 				setVisible(false);

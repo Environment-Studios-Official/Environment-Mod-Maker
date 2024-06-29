@@ -81,7 +81,7 @@ class JavaFileDialogs {
 					if (!fileSystemView.isComputerNode(f) && !fileSystemView.isDrive(f))
 						return UIRES.get("laf.directory");
 
-				if (f.getName().endsWith(".mcreator"))
+				if (f.getName().endsWith(".modproject"))
 					return IconUtils.resize(UIRES.get("mod"), 16, 16);
 
 				return fileSystemView.getSystemIcon(f);
