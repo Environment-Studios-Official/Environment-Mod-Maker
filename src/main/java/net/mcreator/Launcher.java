@@ -60,7 +60,7 @@ public class Launcher {
 			LOG.error("Failed to read MCreator config", e);
 		}
 
-		LOG.info("Starting MCreator {}", version);
+		LOG.info("Starting ESMMaker {}", version);
 
 		// print version of Java
 		LOG.info("Java version: {}, VM: {}, vendor: {}", System.getProperty("java.version"),
@@ -85,19 +85,19 @@ public class Launcher {
 
 		// check if proper version of MCreator per architecture is used
 		if (OS.getSystemBits() == OS.BIT32) {
-			JOptionPane.showMessageDialog(null, "<html>You are trying to run 64-bit MCreator on 32-bit computer.<br>"
-					+ "MCreator no longer supports 32-bit platforms.", "MCreator error", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(null, "<html>You are trying to run 64-bit ESMMaker on 32-bit computer.<br>"
+					+ "ESMMaker no longer supports 32-bit platforms.", "ESMMaker error", JOptionPane.WARNING_MESSAGE);
 			System.exit(-1);
 		}
 
 		LOG.info("Installation path: {}", System.getProperty("user.dir"));
-		LOG.info("User home of MCreator: {}", UserFolderManager.getFileFromUserFolder("/"));
+		LOG.info("User home of ESMMaker: {}", UserFolderManager.getFileFromUserFolder("/"));
 
 		if (!UserFolderManager.createUserFolderIfNotExists()) {
-			JOptionPane.showMessageDialog(null, "<html><b>MCreator failed to write to user directory!</b><br><br>"
-							+ "Make sure that the user running MCreator has permissions to read and write to the directory<br>"
-							+ "in which MCreator tried to create user specific data storage. The path MCreator could not write to is:<br><br>"
-							+ UserFolderManager.getFileFromUserFolder("/") + "<br>", "MCreator file system error",
+			JOptionPane.showMessageDialog(null, "<html><b>ESMMaker failed to write to user directory!</b><br><br>"
+							+ "Make sure that the user running ESMMaker has permissions to read and write to the directory<br>"
+							+ "in which ESMMaker tried to create user specific data storage. The path ESMMaker could not write to is:<br><br>"
+							+ UserFolderManager.getFileFromUserFolder("/") + "<br>", "ESMMaker file system error",
 					JOptionPane.WARNING_MESSAGE);
 			System.exit(-2);
 		}

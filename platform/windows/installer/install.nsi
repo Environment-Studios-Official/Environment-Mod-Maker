@@ -45,7 +45,7 @@ InstallDir "$PROGRAMFILES${BITS}\Pylo\MCreator"
 !define MUI_LICENSEPAGE_TEXT_TOP "Read the license agreement below."
 
 !define MUI_FINISHPAGE_RUN_TEXT "Start MCreator after finish"
-!define MUI_FINISHPAGE_RUN "$INSTDIR\mcreator.exe"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\esmmaker.exe"
 
 !define MUI_FINISHPAGE_LINK "Donate and support MCreator project"
 !define MUI_FINISHPAGE_LINK_LOCATION "http://mcreator.net/donate"
@@ -89,11 +89,11 @@ Section "MCreator ${MCREATOR_VERSION}" Installation
   File /r "win${BITS}\*"
 
   ;create desktop shortcut
-  CreateShortCut "$DESKTOP\MCreator.lnk" "$INSTDIR\mcreator.exe"
+  CreateShortCut "$DESKTOP\MCreator.lnk" "$INSTDIR\esmmaker.exe"
 
   ;create start menu entry
   CreateDirectory "$SMPROGRAMS\Pylo"
-  CreateShortCut "$SMPROGRAMS\Pylo\MCreator.lnk" "$INSTDIR\mcreator.exe"
+  CreateShortCut "$SMPROGRAMS\Pylo\MCreator.lnk" "$INSTDIR\esmmaker.exe"
 
   ;write uninstall information to the registry
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "DisplayName" "MCreator ${MCREATOR_VERSION}"
@@ -103,7 +103,7 @@ Section "MCreator ${MCREATOR_VERSION}" Installation
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "HelpLink" "https://mcreator.net/wiki"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "URLUpdateInfo" "https://mcreator.net/download"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "UninstallString" "$INSTDIR\uninstall.exe"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "DisplayIcon" "$INSTDIR\mcreator.exe"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "DisplayIcon" "$INSTDIR\esmmaker.exe"
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "EstimatedSize" ${INSTALLSIZE}
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}}" "NoModify" 1
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MUI_PRODUCT}" "NoRepair" 1
@@ -112,7 +112,7 @@ Section "MCreator ${MCREATOR_VERSION}" Installation
   WriteRegStr HKCR ".mcreator" "" "MCreatorWorkspaceFile"
   WriteRegStr HKCR "MCreatorWorkspaceFile" "" "MCreator workspace file"
   WriteRegStr HKCR "MCreatorWorkspaceFile\shell" "" "open"
-  WriteRegStr HKCR "MCreatorWorkspaceFile\DefaultIcon" "" "$INSTDIR\mcreator.exe,0"
+  WriteRegStr HKCR "MCreatorWorkspaceFile\DefaultIcon" "" "$INSTDIR\esmmaker.exe,0"
   WriteRegStr HKCR "MCreatorWorkspaceFile\shell\edit" "" "Edit this MCreator workspace"
   WriteRegStr HKCR "MCreatorWorkspaceFile\shell\edit\command" "" "$\"$INSTDIR\mcreator.exe$\" $\"%1$\""
   WriteRegStr HKCR "MCreatorWorkspaceFile\shell\open\command" "" "$\"$INSTDIR\mcreator.exe$\" $\"%1$\""
@@ -145,7 +145,7 @@ Section "Uninstall"
   RMDir /r "$INSTDIR\plugins\*.*"
 
   ;Delete Files of MCreator
-  Delete "$INSTDIR\mcreator.exe"
+  Delete "$INSTDIR\esmmaker.exe"
   Delete "$INSTDIR\mcreator.bat"
   Delete "$INSTDIR\LICENSE.txt"
 

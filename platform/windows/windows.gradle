@@ -1,7 +1,7 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
 launch4j {
-    outfile = 'mcreator.exe'
+    outfile = 'esmmaker.exe'
     mainClassName = 'net.mcreator.Launcher'
     dontWrapJar = false
     copyConfigurable = []
@@ -14,20 +14,20 @@ launch4j {
     requiresJdk = true
     requires64Bit = true
 
-    errTitle = 'MCreator'
+    errTitle = 'ESMMaker'
     supportUrl = 'https://mcreator.net/support'
 
     if (project.snapshot) {
-        fileDescription = "MCreator " + (String) project.mcreatorconf.getProperty('mcreator')
+        fileDescription = "ESMMaker " + (String) project.mcreatorconf.getProperty('mcreator')
         textVersion = (String) project.mcreatorconf.getProperty('mcreator')
     } else {
-        fileDescription = "MCreator " + (String) project.mcreatorconf.getProperty('mcreator') + "." + project.builddate
+        fileDescription = "ESMMaker " + (String) project.mcreatorconf.getProperty('mcreator') + "." + project.builddate
         textVersion = (String) project.mcreatorconf.getProperty('mcreator') + "." + project.builddate
     }
 
-    productName = "MCreator"
-    companyName = "Pylo"
-    copyright = "Pylo"
+    productName = "ESMMaker"
+    companyName = "Environment Studios"
+    copyright = "Environment Studios"
 
     icon = "${projectDir}/src/main/resources/net/mcreator/ui/res/" + (project.snapshot ? "icon_eap.ico" : "icon.ico")
 }
@@ -41,7 +41,7 @@ tasks.register('exportWin64', Copy.class) {
     into 'build/export/win64'
     into('') {
         from file('LICENSE.txt')
-        from file('build/launch4j/mcreator.exe')
+        from file('build/launch4j/esmmaker.exe')
     }
     into('lib') {
         from 'build/libs'
@@ -53,7 +53,7 @@ tasks.register('exportWin64', Copy.class) {
     into('jdk') { from 'jdk/jdk21_win_64' }
 
     doLast {
-        signFile(file('build/export/win64/mcreator.exe'))
+        signFile(file('build/export/win64/esmmaker.exe'))
     }
 }
 
@@ -90,7 +90,7 @@ tasks.register('buildInstallerWin64', Exec.class) {
 
     doLast {
         delete 'build/export/install64.nsi'
-        signFile(file('build/export/MCreator ' + (String) project.mcreatorconf.getProperty('mcreator') + ' Windows 64bit.exe'))
+        signFile(file('build/export/ESMMaker ' + (String) project.mcreatorconf.getProperty('mcreator') + ' Windows 64bit.exe'))
     }
 }
 

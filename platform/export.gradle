@@ -95,11 +95,7 @@ tasks.register('exportAll') {
     group 'export'
 
     dependsOn exportWindows
-    dependsOn exportMac
-    dependsOn exportLinux
     dependsOn generateExportReport
 }
 
 apply from: 'platform/windows/windows.gradle'
-apply from: 'platform/linux/linux.gradle'
-apply from: 'platform/mac/mac.gradle'
