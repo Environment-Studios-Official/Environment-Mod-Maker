@@ -120,7 +120,7 @@ void signFile(File fileToSign) {
                     '--certfile', 'codesign-chain.pem',
                     '--tsmode', 'RFC3161',
                     '--tsaurl', 'http://timestamp.globalsign.com/tsa/r6advanced1',
-                    '--name', 'MCreator',
+                    '--name', 'ESMMaker',
                     '--url', 'https://mcreator.net/',
                     fileToSign
         }
