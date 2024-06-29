@@ -101,7 +101,7 @@ public final class MCreator extends JFrame implements IWorkspaceProvider, IGener
 	private JPanel mainPanel;
 
 	public MCreator(@Nullable MCreatorApplication application, @Nonnull Workspace workspace) {
-		LOG.info("Opening MCreator workspace: {}", workspace.getWorkspaceSettings().getModID());
+		LOG.info("Opening ESMMaker workspace: {}", workspace.getWorkspaceSettings().getModID());
 
 		this.windowUID = System.currentTimeMillis();
 		this.workspace = workspace;
@@ -379,7 +379,7 @@ public final class MCreator extends JFrame implements IWorkspaceProvider, IGener
 		}
 
 		if (safetoexit) {
-			LOG.info("Closing MCreator window ...");
+			LOG.info("Closing ESMMaker window ...");
 			PreferencesManager.PREFERENCES.hidden.fullScreen.set(getExtendedState() == MAXIMIZED_BOTH);
 			if (splitPane != null)
 				PreferencesManager.PREFERENCES.hidden.projectTreeSplitPos.set(
